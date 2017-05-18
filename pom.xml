@@ -1,0 +1,53 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.adanac.framework.archetypes</groupId>
+  <artifactId>adanac-pom</artifactId>
+  <version>1.0.0</version>
+  <packaging>pom</packaging>
+  <name>adanac-pom</name>
+  <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <adanac.version>0.0.1-SNAPSHOT</adanac.version>
+        <jplugin.version>1.3.0-SNAPSHOT</jplugin.version>
+        <spring.version>4.2.4.RELEASE</spring.version>
+        <spring.security.version>4.0.4.RELEASE</spring.security.version>
+        <mybatis.version>3.3.1</mybatis.version>
+        <mybatis-spring.version>1.2.4</mybatis-spring.version>
+        <mysql-connector.version>5.1.36</mysql-connector.version>
+        <sqlserver-connector.version>4.0</sqlserver-connector.version>
+        <oracle-connector.version>11.2.0.1.0</oracle-connector.version>
+        <fastjson.version>1.2.7</fastjson.version>
+        <log4j.version>1.2.17</log4j.version>
+        <slf4j.version>1.6.6</slf4j.version>
+        <junit.version>4.11</junit.version>
+        <h2.version>1.4.191</h2.version>
+        <jdk.version>1.8</jdk.version>
+        <plugin.compiler.version>3.1</plugin.compiler.version>
+        <plugin.surefire.version>2.19</plugin.surefire.version>
+        <httpclient.version>4.5</httpclient.version>
+
+        <!--DB 通用配置-->
+        <db.logAbandoned>true</db.logAbandoned>
+        <db.testWhileIdle>true</db.testWhileIdle>
+        <db.testOnReturn>false</db.testOnReturn>
+        <db.testOnBorrow>true</db.testOnBorrow>
+        <db.validationQuery><![CDATA[select now()]]></db.validationQuery>
+        <db.numTestsPerEvictionRun>16</db.numTestsPerEvictionRun>
+        <db.timeBetweenEvictionRunsMillis>60000</db.timeBetweenEvictionRunsMillis>
+        <db.minEvictableIdleTimeMillis>180000</db.minEvictableIdleTimeMillis>
+        <db.removeAbandoned>true</db.removeAbandoned>
+        <db.removeAbandonedTimeout>180</db.removeAbandonedTimeout>
+  </properties>
+  <distributionManagement>
+ 		<repository>
+			<id>adanac-nexus-releases</id>
+			<name>adanac Release Repository</name>
+			<url>http://localhost:8081/nexus/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>adanac-nexus-snapshots</id>
+			<name>adanac Snapshot Repository</name>
+			<url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+     </distributionManagement>
+</project>
